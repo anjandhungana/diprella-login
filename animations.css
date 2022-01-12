@@ -1,0 +1,67 @@
+@keyframes slideLeft {
+    0%{
+        right:0;
+    }
+    100%{
+        right:68%;
+    }
+}
+
+@keyframes slideRight {
+    0%{
+        left:0;
+    }
+    100%{
+        left:180px;
+    }
+}
+
+@keyframes slidemainRight {
+    0%{
+        left:0;
+    }
+    100%{
+        left:30%;
+    }
+}
+
+@keyframes fade-out {
+    0%{
+        opacity:100%;
+    }
+    50%{
+        opacity:0;
+    }
+    100%{
+        opacity:0%;
+    }
+}
+
+@keyframes fade-in {
+    0%{
+        opacity:0;
+    }
+    50%{
+        opacity:0%;
+    }
+    100%{
+        opacity:100%;
+    }
+}
+
+
+@keyframes stretch {
+    0%{
+        width:33%;
+        content:'Sign up';
+    }
+
+    50%{
+        width:50%;
+        content: '';
+    }
+    100%{
+        width:33%;
+        content:'Sign In'
+    }
+}
