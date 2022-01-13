@@ -37,13 +37,34 @@ body{
 
 /* form */
 
-input{
+div[class^='input-']{
     padding:10px 20px;
     height:50px;
     border-radius:24px;
     border:none;
     background-color: #eef5f3;
     margin:10px;
+    font-size:20px;
+    display: flex;
+    align-items: center;
+}
+
+div[class^='input-'] i{
+    color:grey;
+    margin-right:20px;
+}
+#signup-form span{
+    display:inline-flex;
+}
+
+input{
+    border:none;
+    background:none;
+    
+}
+input:focus{
+    outline:none;
+    border:none;
 }
 
 #login-form{

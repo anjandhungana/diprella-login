@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="animations.css" />
     <script src="./scripts.js"></script>
 
     <link
@@ -15,9 +15,7 @@
     />
   </head>
   <body>
-    <div id="cross">
-      X
-    </div>
+    <div id="cross">X</div>
     <div id="main" class="main">
       <div class="wrapper flex flex-column align-items-center">
         <h1>Login to Your Account</h1>
@@ -28,8 +26,14 @@
         ></span>
         <span><p>OR</p></span>
         <form id="login-form" class="flex flex-column">
-          <input type="text" placeholder="Email" />
-          <input type="password" placeholder="Password" />
+          <div class="input-email-div">
+            <i class="fa fa-envelope"></i>
+            <input type="text" placeholder="Email" />
+          </div>
+          <div class="input-password-div">
+            <i class="fa fa-lock"></i>
+            <input type="password" placeholder="Password" />
+          </div>
         </form>
         <button class="btn" id="signin-main-btn" onclick="moveRight()">
           Sign In
@@ -46,11 +50,29 @@
         ></span>
         <span><p>OR</p></span>
         <form id="signup-form" class="flex flex-column">
-          <span><input type="text" placeholder="Name" />
-            <input type="text" placeholder="Surname" />
-  </span>         <span> <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" /> </span>
+          <span>
+            <div class="input-name">
+               <i class="fa fa-user"></i>
+              <input type="text" placeholder="Name" />
+            </div>
+            <div class="input-surname">
+              <i class="fa fa-user"></i>
+              <input type="text" placeholder="Surname" />
+            </div>
+          </span>
+
+          <span>
+            <div class="input-email">
+              <i class="fa fa-envelope"></i>
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="input-password">
+              <i class="fa fa-user"></i>
+
+              <input type="password" placeholder="Password" /></div
+          ></span>
         </form>
+
         <button class="btn" id="signin-main-btn" onclick="moveRight()">
           Sign In
         </button>
@@ -66,13 +88,11 @@
         <p id="side-signin-p" class="d-none">
           If you already have an account, just sign in. We've missed you!
         </p>
-        
+
         <button class="btn" id="signUp-side-btn" onclick="clickSignup()">
           Sign Up
         </button>
-        <button class="btn d-none" id="signIn-side-btn" onclick="clickSignIn()" >
-          Sign In
-        </button>
+        <button class="btn d-none" id="signIn-side-btn">Sign In</button>
       </div>
     </div>
   </body>
