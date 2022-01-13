@@ -16,6 +16,7 @@
   </head>
   <body>
     <div id="cross">X</div>
+    <!-- sign in main -->
     <div id="main" class="main">
       <div class="wrapper flex flex-column align-items-center">
         <h1>Login to Your Account</h1>
@@ -35,12 +36,13 @@
             <input type="password" placeholder="Password" />
           </div>
         </form>
-        <button class="btn" id="signin-main-btn" onclick="moveRight()">
+        <button class="btn" id="signin-main-btn" onclick="slideRight()">
           Sign In
         </button>
       </div>
     </div>
-    <div id="mainUp" class="main d-none">
+    <!-- sign up main -->
+    <div id="mainUp" class="main">
       <div class="wrapper flex flex-column align-items-center">
         <h1>Sign up using social networks</h1>
         <p>Login using social networks</p>
@@ -52,7 +54,7 @@
         <form id="signup-form" class="flex flex-column">
           <span>
             <div class="input-name">
-               <i class="fa fa-user"></i>
+              <i class="fa fa-user"></i>
               <input type="text" placeholder="Name" />
             </div>
             <div class="input-surname">
@@ -74,26 +76,26 @@
         </form>
 
         <button class="btn" id="signin-main-btn" onclick="moveRight()">
-          Sign In
-        </button>
-      </div>
-    </div>
-    <div id="side" class="side flex">
-      <div class="sidecontainer flex flex-column jc-center align-items-center">
-        <h1 id="side-signup-head">New Here?</h1>
-        <h1 id="side-signin-head" class="d-none">One of Us?</h1>
-        <p id="side-signup-p">
-          Sign up and discover a great amount of new opportunities
-        </p>
-        <p id="side-signin-p" class="d-none">
-          If you already have an account, just sign in. We've missed you!
-        </p>
-
-        <button class="btn" id="signUp-side-btn" onclick="clickSignup()">
           Sign Up
         </button>
-        <button class="btn d-none" id="signIn-side-btn">Sign In</button>
       </div>
     </div>
+
+    <!--sidebar-->
+    <div class="sidebar" id="sidebar">
+      <div class="overlay" id="overlay"> 
+        <div class="left overlay-panel">
+          <h1>One of Us?</h1>
+          <p>If you already have an account, just sign in. We've missed you</p>
+          <button id='signInbtn' onclick="clickSignIn()">Sign In</button>
+        </div>
+        <div class="right overlay-panel">
+          <h1>New Here?</h1>
+          <p>Sign up and discover a great amount of new opportunities!</p>
+          <button id='signUpbtn' onclick="clickSignUp()">Sign Up</button>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>

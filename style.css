@@ -1,222 +1,237 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Roboto',sans-serif;
-    margin:0;
-    display: flex;
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  display: flex;
 }
 
-
-.flex{
-    display:flex;
+.flex {
+  display: flex;
 }
 
-.flex-column{
-    flex-direction: column;
+.flex-column {
+  flex-direction: column;
 }
 
-.align-items-center{
-    align-items: center;
+.align-items-center {
+  align-items: center;
 }
 
-.jc-center{
-    justify-content: center;
+.jc-center {
+  justify-content: center;
 }
 
-.jc-space-between{
-    justify-content: space-between;
+.jc-space-between {
+  justify-content: space-between;
 }
 
-.container{
-    display:flex;
-    height:100vh;
-    width:100%;
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
 }
 
 /* form */
 
-div[class^='input-']{
-    padding:10px 20px;
-    height:50px;
-    border-radius:24px;
-    border:none;
-    background-color: #eef5f3;
-    margin:10px;
-    font-size:20px;
-    display: flex;
-    align-items: center;
+div[class^="input-"] {
+  padding: 10px 20px;
+  height: 50px;
+  border-radius: 24px;
+  border: none;
+  background-color: #eef5f3;
+  margin: 10px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
 }
 
-div[class^='input-'] i{
-    color:grey;
-    margin-right:20px;
+div[class^="input-"] i {
+  color: grey;
+  margin-right: 20px;
 }
-#signup-form span{
-    display:inline-flex;
-}
-
-input{
-    border:none;
-    background:none;
-    
-}
-input:focus{
-    outline:none;
-    border:none;
+#signup-form span {
+  display: inline-flex;
 }
 
-#login-form{
-    width: 100%;
+input {
+  border: none;
+  background: none;
+}
+input:focus {
+  outline: none;
+  border: none;
 }
 
-
-
-#signUp-form span{
-    width:100%;
+#login-form {
+  width: 100%;
 }
 
-#signUp-form span input{
-    width:100%;
+#signUp-form span {
+  width: 100%;
 }
 
-.btn{
-    margin:1rem;
-    height:50px;
-    width:50%;
-    border-radius:25px;
-   
-    border:none;
-    
+#signUp-form span input {
+  width: 100%;
 }
 
-#signin-main-btn{
-    color:white;
-    background-color: #28b498;
+.btn {
+  margin: 1rem;
+  height: 50px;
+  width: 50%;
+  border-radius: 25px;
+
+  border: none;
 }
 
-#signIn-side-btn{
-    color:#333;
-    background-color: white;
-    
+#signin-main-btn {
+  color: white;
+  background-color: #28b498;
 }
-
-#signUp-side-btn{
-   background-color: white;
-   color:#333;
-   width:70%;
-   height:50px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border-radius: 30px;
-}
-.signUp-side-btn:hover{
-    cursor: pointer;
-}
-
-
-
-
 
 /* SOCIAL */
-.fa-facebook, .fa-linkedin{
-    color:#457;
+.fa-facebook,
+.fa-linkedin {
+  color: #457;
 }
 
-.fa-google-plus{
-    color:#e54;
+.fa-google-plus {
+  color: #e54;
 }
 
-.social{
-    font-size: 2rem;
+.social {
+  font-size: 2rem;
 }
 
-.social i{
-    margin:0 10px;
+.social i {
+  margin: 0 10px;
 }
 
-.main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width:67%;
-    height: 100vh;
-    position:absolute;
-    left:0;
-     /* animation-name: slideRight, fade-out;
+.main {
+  background: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100vh;
+  overflow:hidden;
+  position: absolute;
+  left: 0;
+  animation:1s ease-in-out;
+  /* animation-name: slideRight, fade-out;
     animation-duration: 2s;
     animation-timing-function: cubic-bezier(.47,.36,0,1); */
+  
 }
 
-.side{
-    justify-content: center;
-    width:33%;
-    background-color: #28b498;
-    height:100vh;
-    position:absolute;
-    right:0;
-    /* animation-name:slideLeft, stretch;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out; */
-    overflow:hidden;
+#mainUp {
+  z-index: 1;
+  transition:1s ease-in-out;
 }
 
-.sidecontainer{
-    height:100%;
-    width:80%;
-    padding:20px;
-    text-align:center;
-    color:white;
-    position:relative;
+#main {
+  z-index: 2;
+  transition: 1s ease-in-out;
 }
 
-.sidecontainer button{
-    position:absolute;
-    bottom:25%;
+/* sidebar */
+.sidebar {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  z-index: 90;
+  overflow: hidden;
+  transition: 0.9s ease-in-out;
 }
 
-
-
-
-
-.login-main span p:nth-child(1):before, .login-main span p:nth-child(1):after{
-    position:absolute;
-    content:'';
-    height:1px;
-    width:200px;
-    top:50%;
-    background-color:grey;
+.overlay {
+  background-color: #28b498;
+  width: 200%;
+  height: 100%;
+  position: relative;
+  left: -100%;
+  color: white;
+  border-radius: 1px solid white;
+  transition: 1s ease-in-out;
 }
 
-.login-main span p:nth-child(1):before{
-    right:30px;
+.overlay-panel button {
+  height: 40px;
+  padding: 10px;
+  width: 50%;
+  border: none;
+  border-radius: 30px;
+  background-color: white;
+  color: #333;
+  transition: 0.3s ease;
 }
 
-.login-main span p:nth-child(1):after{
-    left:30px;
+.overlay-panel button:hover {
+  color: #28b498;
 }
 
-.d-none{
-    display: none;
+button:active {
+    transform: scale(0.98);
+  }
+
+.overlay-panel {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 40px;
+  height: 100%;
+  width: 50%;
+  justify-content: center;
 }
 
-.wrapper{
-    width:70%;
-    height:100%;
-    justify-content: center;
-    /* align-items: center; */
+.right {
+  right: 0;
+  transform: translateX(0);
 }
 
-#cross{
-    position:absolute;
-    font-size: 2rem;
-    right:0;
-    top:0;
-    z-index:99;
-    padding:1rem 1.5rem;
-    color:whitesmoke;
-    transition:1.5s ease;
+.login-main span p:nth-child(1):before,
+.login-main span p:nth-child(1):after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 200px;
+  top: 50%;
+  background-color: grey;
+}
+
+.login-main span p:nth-child(1):before {
+  right: 30px;
+}
+
+.login-main span p:nth-child(1):after {
+  left: 30px;
+}
+
+.d-none {
+  display: none;
+}
+
+.wrapper {
+  width: 70%;
+  height: 100%;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+#cross {
+  position: absolute;
+  font-size: 2rem;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  padding: 1rem 1.5rem;
+  color: whitesmoke;
+  transition: 1.5s ease;
 }
